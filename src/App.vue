@@ -1,15 +1,15 @@
 <template>
-  <ClockBase />
+  <ClockStyle />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import ClockBase from './components/Style/ComponentsStyle.vue';
+import ClockStyle from './components/Style/ComponentsStyle.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    ClockBase,
+    ClockStyle,
   }
 });
 </script>

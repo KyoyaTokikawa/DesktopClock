@@ -3,6 +3,9 @@
         <div class="neko-box-a">
             <div class="city_border_white"></div>
             <div class="city_border_blue"></div>
+            <div class="EarCharm_sub-1"></div>
+            <div class="EarCharm_sub-2"></div>
+            <div class="EarCharm"></div>
             <ComponetnsBaseVue />
         </div>
     </div>
@@ -40,7 +43,7 @@ export default defineComponent({
  position: absolute;
  content:'';
  top: -150px;
- z-index: -10;
+ z-index: -1;
 }
 .neko-box-a::before {
  left: 3%;
@@ -56,7 +59,98 @@ export default defineComponent({
  border-radius: 300px 1px 300px 1px;
  transform: rotate( 155deg );
 }
+.EarCharm,
+.EarCharm::after{
+    width: 80px;
+    height: 80px;
+    left: 12%;
+    content: "";
+}
 
+.EarCharm {
+    position: absolute;
+    top: -80px;
+    left: 40px;
+    border-radius: 40px 200px 200px 40px;
+    transform: rotate(15deg);
+    background: linear-gradient(rgb(79, 77, 168) 0%, rgb(42, 42, 97) 99%);
+}
+.EarCharm::after {
+    position: absolute;
+    content: "";
+    border-radius: 300px 40px 40px 300px;
+    left: 100px;
+    top: 0px;
+    background: linear-gradient(rgb(79, 77, 168) 0%, rgb(42, 42, 97) 99%);
+    z-index: -10;
+}
+
+.EarCharm::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 60px;
+    left: 70px;
+    top: 10px;
+    border-radius: 40%;
+    background: linear-gradient(rgb(79, 77, 168) 0%, rgb(42, 42, 97) 99%);
+}
+
+.EarCharm_sub-1 {
+    position: absolute;
+    left: 65px;
+    top: -25px;
+    margin: 0;
+    padding: 10px 0;
+    z-index: 2;
+    height: 100px;
+    width: 40px;
+    border-radius: 0px 40px 0px 0px ;
+    background: linear-gradient(rgb(42, 42, 97) 0%, rgb(79, 77, 168) 99%);
+    transform: rotate(30deg);
+    z-index: auto;
+}
+
+.EarCharm_sub-1:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 99%;
+    height: 0px;
+    width: 0px;
+    border-radius: 0px 0px 10px 10px;
+    border-left: 20px solid rgb(79, 77, 168);
+    border-right: 20px  solid rgb(79, 77, 168);
+    border-bottom: 5px solid transparent;
+}
+
+.EarCharm_sub-2 {
+    position: absolute;
+    left: 125px;
+    top: -10px;
+    margin: 0;
+    padding: 10px 0;
+    z-index: 2;
+    height: 100px;
+    width: 40px;
+    border-radius: 40px 0px 0px 0px ;
+    background: linear-gradient(rgb(42, 42, 97) 0%, rgb(79, 77, 168) 99%);
+    transform: rotate(350deg);
+    z-index: auto;
+}
+
+.EarCharm_sub-2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 99%;
+    height: 0px;
+    width: 0px;
+    border-radius: 0px 0px 10px 10px;
+    border-left: 20px solid rgb(79, 77, 168);
+    border-right: 20px  solid rgb(79, 77, 168);
+    border-bottom: 5px solid transparent;
+}
 .city_border_white {
     position: absolute;
     background-color: white;
@@ -71,10 +165,10 @@ export default defineComponent({
     width: 100%;
     height: 20%;
 }
+
 .neko-wrap-a{
  background-color: transparent;
  position: relative;
  height: 50%;
- z-index: 0;
 }
 </style>
