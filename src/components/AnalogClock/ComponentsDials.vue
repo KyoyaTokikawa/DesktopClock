@@ -43,7 +43,7 @@ export default defineComponent ({
 
 <style scoped>
 .dials {
-    background-color: yellow;
+    background-color: gold;
     border-radius: 300px;
 
     position: relative;

@@ -32,7 +32,7 @@ export default defineComponent({
  color: #333333; /* 文字色 */
  font-weight: bold; /* テキスト太字（不要なら行を削除） */
  text-align: center; /* テキスト中央（不要なら行を削除） */
- border: 7px solid rgb(247, 204, 93); /* ボックス枠線(太さ・線種・色) */
+ border: 10px solid gold; /* ボックス枠線(太さ・線種・色) */
  border-radius: 50px;
  z-index: auto;
 }
@@ -48,14 +48,22 @@ export default defineComponent({
 .neko-box-a::before {
  left: 3%;
  background: rgb(250, 239, 141); /* 左耳背景色 */
- border: 7px solid rgb(247, 204, 93); /* 左耳枠線(太さ・線種・色) */
+ border-top: 18px solid; /* 左耳枠線(太さ・線種・色) */
+ border-right: 12px solid; /* 左耳枠線(太さ・線種・色) */
+ border-left: 12px solid; /* 左耳枠線(太さ・線種・色) */
+ border-bottom: 8px solid; /* 左耳枠線(太さ・線種・色) */
+ border-color: gold;
  border-radius: 300px 1px 300px 1px;
- transform: rotate( 115deg );
+ transform: rotate( 125deg );
 }
 .neko-box-a::after {
  right: 3%;
  background: rgb(250, 239, 141); /* 右耳背景色 */
- border: 7px solid rgb(247, 204, 93); /* 右耳枠線(太さ・線種・色) */
+ border-top: 12px solid; /* 右耳枠線(太さ・線種・色) */
+ border-right: 18px solid; /* 右耳枠線(太さ・線種・色) */
+ border-left: 8px solid; /* 右耳枠線(太さ・線種・色) */
+ border-bottom: 12px solid; /* 右耳枠線(太さ・線種・色) */
+ border-color: gold;
  border-radius: 300px 1px 300px 1px;
  transform: rotate( 155deg );
 }
@@ -73,7 +81,7 @@ export default defineComponent({
     left: 40px;
     border-radius: 40px 200px 200px 40px;
     transform: rotate(15deg);
-    background: linear-gradient(rgb(79, 77, 168) 0%, rgb(42, 42, 97) 99%);
+    background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
 }
 .EarCharm::after {
     position: absolute;
@@ -81,7 +89,7 @@ export default defineComponent({
     border-radius: 300px 40px 40px 300px;
     left: 100px;
     top: 0px;
-    background: linear-gradient(rgb(79, 77, 168) 0%, rgb(42, 42, 97) 99%);
+    background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
     z-index: -10;
 }
 
@@ -93,7 +101,7 @@ export default defineComponent({
     left: 70px;
     top: 10px;
     border-radius: 40%;
-    background: linear-gradient(rgb(79, 77, 168) 0%, rgb(42, 42, 97) 99%);
+    background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
 }
 
 .EarCharm_sub-1 {
@@ -106,7 +114,7 @@ export default defineComponent({
     height: 100px;
     width: 40px;
     border-radius: 0px 40px 0px 0px ;
-    background: linear-gradient(rgb(42, 42, 97) 0%, rgb(79, 77, 168) 99%);
+    background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
     transform: rotate(30deg);
     z-index: auto;
 }
@@ -119,8 +127,8 @@ export default defineComponent({
     height: 0px;
     width: 0px;
     border-radius: 0px 0px 10px 10px;
-    border-left: 20px solid rgb(79, 77, 168);
-    border-right: 20px  solid rgb(79, 77, 168);
+    border-left: 20px solid rgb(46, 46, 105);
+    border-right: 20px  solid rgb(46, 46, 105);
     border-bottom: 5px solid transparent;
 }
 
@@ -134,7 +142,7 @@ export default defineComponent({
     height: 100px;
     width: 40px;
     border-radius: 40px 0px 0px 0px ;
-    background: linear-gradient(rgb(42, 42, 97) 0%, rgb(79, 77, 168) 99%);
+    background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
     transform: rotate(350deg);
     z-index: auto;
 }
@@ -147,8 +155,8 @@ export default defineComponent({
     height: 0px;
     width: 0px;
     border-radius: 0px 0px 10px 10px;
-    border-left: 20px solid rgb(79, 77, 168);
-    border-right: 20px  solid rgb(79, 77, 168);
+    border-left: 20px solid rgb(46, 46, 105);
+    border-right: 20px  solid rgb(46, 46, 105);
     border-bottom: 5px solid transparent;
 }
 .city_border_white {
