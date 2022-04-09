@@ -1,15 +1,15 @@
 <template>
-  <ComponentsAnalogClockVue style="top: 50%;left: 30%;"/>
+  <ClockBase />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import ComponentsAnalogClockVue from './components/ComponentsAnalogClock.vue';
+import ClockBase from './components/Style/ComponentsStyle.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    ComponentsAnalogClockVue
+    ClockBase,
   }
 });
 </script>

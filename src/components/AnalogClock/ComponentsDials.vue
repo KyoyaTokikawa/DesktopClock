@@ -43,7 +43,7 @@ export default defineComponent ({
 
 <style scoped>
 .dials {
-    background-color: rgb(177, 120, 120);
+    background-color: yellow;
     border-radius: 300px;
 
     position: relative;
@@ -53,7 +53,7 @@ export default defineComponent ({
 }
 
 .scale {
-    background-color: rgb(247, 4, 4);
+    background-color: rgb(245, 0, 0);
 
     position: absolute;
 
@@ -73,7 +73,7 @@ export default defineComponent ({
     margin-top: 20px;
     margin-left: -15px;
 
-    color: rgb(255, 251, 0);
+    color: rgb(0, 17, 255);
     font-size: 28px;
     font-weight: bold;
     text-align: center;

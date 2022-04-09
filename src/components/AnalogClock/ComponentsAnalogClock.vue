@@ -1,6 +1,6 @@
 <template>
     <div class="clock">
-        <Dials />
+        <Dials style="margin: 0;"/>
         <Hand class="hand seconds" type="seconds" :rotate="seconds"/>
         <Hand class="hand minutes" type="minutes" :rotate="minutes" />
         <Hand class="hand hours"   type="hours"   :rotate="hours"/>
@@ -11,7 +11,7 @@
 import { defineComponent, computed } from "vue";
 import Hand from './ComponentsHand.vue'
 import Dials from './ComponentsDials.vue'
-import { DateTimeStore } from '@/store/DateTimeStore'
+import { DateTimeStore } from '../../store/DateTimeStore'
 
 export default defineComponent({
     components: {
@@ -27,10 +27,21 @@ export default defineComponent({
         let nn = datetimestore.ValNumNN;
 
         const seconds = computed(() => {
-            return 6 * (ss.value + nn.value / 1000);
+            let val = 6 * (ss.value + nn.value / 100000);
+            if (ss.value % 5 === 0)
+            {
+                val = val + 1
+            }
+            return val;
         });
         const minutes = computed(() => {
-            return 6 * (mm.value + ss.value / 360)
+            let val = 6 * (mm.value + ss.value / 360);
+            if (mm.value % 5 === 0 || mm.value === 0
+            )
+            {
+                val = val + 1;
+            } 
+            return val;
         });
         const hours = computed(() => {
             return 30 * (hh.value + mm.value / 360)

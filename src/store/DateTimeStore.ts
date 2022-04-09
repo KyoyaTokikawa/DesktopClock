@@ -15,7 +15,10 @@ export class DateTimeStore extends StoreClass {
     public static Milliseconds = "nn";
     public static hhmmss = "hhmmss";
     public static hhmm = "hhmm";
-    
+    public static StrHour = "StrHH";
+    public static StrMinutes = "StrMM";
+    public static StrSeconds = "StrSS";
+
     constructor()
     {
         super();
@@ -25,10 +28,16 @@ export class DateTimeStore extends StoreClass {
             this.DispatchChange({ name: DateTimeStore.yyyymmddhhmmss, value: this.GetHHMMss()                  } as ClassName);
             this.DispatchChange({ name: DateTimeStore.hhmmss,         value: this.GetHHMMss()                  } as ClassName);
             this.DispatchChange({ name: DateTimeStore.hhmm,           value: this.GetHHMM()                    } as ClassName);
+            this.DispatchChange({ name: DateTimeStore.Year,           value: this.GetYear()                    } as ClassName);
+            this.DispatchChange({ name: DateTimeStore.Month,          value: this.GetMonth()                   } as ClassName);
+            this.DispatchChange({ name: DateTimeStore.Day,            value: this.GetDay()                     } as ClassName);
             this.DispatchChange({ name: DateTimeStore.Hour,           value: this.GetNumHH()                   } as ClassName);
             this.DispatchChange({ name: DateTimeStore.Minutes,        value: this.GetNumMM()                   } as ClassName);
             this.DispatchChange({ name: DateTimeStore.Seconds,        value: this.GetNumSS()                   } as ClassName);
             this.DispatchChange({ name: DateTimeStore.Milliseconds,   value: this.GetNumNN()                   } as ClassName);
+            this.DispatchChange({ name: DateTimeStore.StrHour,        value: this.GetStrHH()                   } as ClassName);
+            this.DispatchChange({ name: DateTimeStore.StrMinutes,     value: this.GetStrMM()                   } as ClassName);
+            this.DispatchChange({ name: DateTimeStore.StrSeconds,     value: this.GetStrSS()                   } as ClassName);
         });
     }
 
@@ -55,6 +64,22 @@ export class DateTimeStore extends StoreClass {
                 return val;
         }
     }
+
+    private GetYear(): string {
+        const val = this.GetValue(DateTimeStore.Year);
+        return val;
+    }
+    
+    private GetMonth(): string {
+        const val = this.GetValue(DateTimeStore.Month);
+        return val;
+    }
+
+    private GetDay(): string {
+        const val = this.GetValue(DateTimeStore.Day);
+        return val;
+    }
+
     private GetHHMMss(): string{
         const HH: string = this.GetValue(DateTimeStore.Hour);
         const MM: string = this.GetValue(DateTimeStore.Minutes);
@@ -66,13 +91,17 @@ export class DateTimeStore extends StoreClass {
         const MM: string = this.GetValue(DateTimeStore.Minutes);
         return HH + ':' + MM;
     }
+    private GetStrHH(): string{
+        const val: string = this.GetValue(DateTimeStore.Hour);
+        return val;
+    }
 
-    private GetMM(): string{
+    private GetStrMM(): string{
         const val: string = this.GetValue(DateTimeStore.Minutes);
         return val;
     }
 
-    private GetSS(): string{
+    private GetStrSS(): string{
         const val: string = this.GetValue(DateTimeStore.Seconds);
         return val;
     }
@@ -128,6 +157,18 @@ export class DateTimeStore extends StoreClass {
     {
         return this.GetComputed(DateTimeStore.yyyymmddhhmmss);
     }
+    get ValStrYear(): ComputedRef
+    {
+        return this.GetComputed(DateTimeStore.Year);
+    }
+    get ValStrMonth(): ComputedRef
+    {
+        return this.GetComputed(DateTimeStore.Month);
+    }
+    get ValStrDay(): ComputedRef
+    {
+        return this.GetComputed(DateTimeStore.Day);
+    }
     get ValNumHH(): ComputedRef
     {
         return this.GetComputed(DateTimeStore.Hour);
@@ -144,6 +185,19 @@ export class DateTimeStore extends StoreClass {
     get ValNumNN(): ComputedRef
     {
         return this.GetComputed(DateTimeStore.Milliseconds);
+    }
+
+    get ValStrMM(): ComputedRef
+    {
+        return this.GetComputed(DateTimeStore.StrMinutes);
+    }
+    get ValStrSS(): ComputedRef
+    {
+        return this.GetComputed(DateTimeStore.StrSeconds);
+    }
+    get ValStrHH(): ComputedRef
+    {
+        return this.GetComputed(DateTimeStore.StrHour);
     }
 }
 
