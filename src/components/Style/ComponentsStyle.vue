@@ -26,7 +26,7 @@ export default defineComponent({
 <style scoped>
 .neko-box-a {
  position: relative;
- margin: 20em auto 3em;
+ margin: 12em auto 1em;
  width: 50%; /* ボックス幅 */
  background: #000000; /* ボックス背景色 */
  color: #333333; /* 文字色 */
@@ -178,5 +178,6 @@ export default defineComponent({
  background-color: transparent;
  position: relative;
  height: 50%;
+ -webkit-app-region: drag;
 }
 </style>
