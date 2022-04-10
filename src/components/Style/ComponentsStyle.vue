@@ -2,7 +2,8 @@
     <div class="neko-wrap-a">
         <div class="neko-box-a">
             <div class="city_border_white"></div>
-            <div class="city_border_blue"></div>
+            <div class="city_border_Navy_1"></div>
+            <div class="city_border_Navy_2"></div>
             <div class="EarCharm_sub-1"></div>
             <div class="EarCharm_sub-2"></div>
             <div class="EarCharm"></div>
@@ -26,8 +27,8 @@ export default defineComponent({
 <style scoped>
 .neko-box-a {
  position: relative;
- margin: 12em auto 1em;
- width: 50%; /* ボックス幅 */
+ top: 180px;
+ width: 98%; /* ボックス幅 */
  background: #000000; /* ボックス背景色 */
  color: #333333; /* 文字色 */
  font-weight: bold; /* テキスト太字（不要なら行を削除） */
@@ -166,12 +167,20 @@ export default defineComponent({
     width: 100%;
     height: 60%;
 }
-.city_border_blue {
+.city_border_Navy_1 {
     position: absolute;
     background-color: navy;
-    top: 40%;
+    top: 32%;
     width: 100%;
-    height: 20%;
+    height: 12%;
+}
+
+.city_border_Navy_2 {
+    position: absolute;
+    background-color: navy;
+    top: 56%;
+    width: 100%;
+    height: 12%;
 }
 
 .neko-wrap-a{

@@ -48,7 +48,7 @@ export default defineComponent({
     height: 50%;
     width: 370px;
     border: 5px solid;
-    border-color: rgb(250, 250, 250);
+    border-color: gold;
     margin-top: 5px;
     background-color: blue;
     z-index: 0;
@@ -65,7 +65,7 @@ export default defineComponent({
     height: 50%;
     width: 370px;
     border: 5px solid;
-    border-color: rgb(255, 255, 255);
+    border-color: gold;
     background-color: red;
     margin-bottom: 5px;
     z-index: 0;
