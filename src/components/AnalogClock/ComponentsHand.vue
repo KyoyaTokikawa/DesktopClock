@@ -15,7 +15,7 @@ export default defineComponent({
 
 <style scoped>
 .hand {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(6, 13, 68, 0.8);
 }
 
 .seconds {

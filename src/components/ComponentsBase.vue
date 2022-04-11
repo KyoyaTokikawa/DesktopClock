@@ -1,5 +1,5 @@
 <template>
-<div style="display: flex; margin: 20px 30px;">
+<div style="display: flex; margin: 20px 30px; -webkit-app-region: drag;">
     <div class="AnalogClock">
         <div style=" margin: 0 auto; display: inline-block;">
             <ComponentsAnalogClockVue />
@@ -47,14 +47,11 @@ export default defineComponent({
     align-items: center;
     height: 50%;
     width: 370px;
-    border: 5px solid;
-    border-color: gold;
     margin-top: 5px;
-    background-color: blue;
     z-index: 0;
 }
 .DigitalClock {
-    color: rgb(255, 255, 255);
+    color: rgb(29, 0, 82);
     margin: 0 auto;
 }
 
@@ -64,14 +61,11 @@ export default defineComponent({
     align-items: center;
     height: 50%;
     width: 370px;
-    border: 5px solid;
-    border-color: gold;
-    background-color: red;
     margin-bottom: 5px;
     z-index: 0;
 }
 .Date {
-    color: rgb(253, 253, 255);
+    color: rgb(29, 0, 82);
     margin: 0 auto;
 }
 </style>

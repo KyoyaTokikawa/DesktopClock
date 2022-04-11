@@ -1,15 +1,15 @@
 <template>
-    <div class="neko-wrap-a">
-        <div class="neko-box-a">
-            <div class="city_border_white"></div>
-            <div class="city_border_Navy_1"></div>
-            <div class="city_border_Navy_2"></div>
-            <div class="EarCharm_sub-1"></div>
-            <div class="EarCharm_sub-2"></div>
-            <div class="EarCharm"></div>
+    <!-- <div class="neko-wrap-a"> -->
+        <!-- <div class="neko-box-a"> -->
+            <!-- <div class="city_border_white"></div> -->
+            <!-- <div class="city_border_Navy_1"></div> -->
+            <!-- <div class="city_border_Navy_2"></div> -->
+            <!-- <div class="EarCharm_sub-1"></div> -->
+            <!-- <div class="EarCharm_sub-2"></div> -->
+            <!-- <div class="EarCharm"></div> -->
             <ComponetnsBaseVue />
-        </div>
-    </div>
+        <!-- </div> -->
+    <!-- </div> -->
 </template>
 
 <script lang="ts">
@@ -37,7 +37,7 @@ export default defineComponent({
  border-radius: 50px;
  z-index: auto;
 }
-.neko-box-a::before, 
+/* .neko-box-a::before, 
 .neko-box-a::after {
  height: 200px;
  width: 200px;
@@ -45,29 +45,29 @@ export default defineComponent({
  content:'';
  top: -150px;
  z-index: -1;
-}
-.neko-box-a::before {
+} */
+/* .neko-box-a::before {
  left: 3%;
- background: rgb(250, 239, 141); /* 左耳背景色 */
- border-top: 18px solid; /* 左耳枠線(太さ・線種・色) */
- border-right: 12px solid; /* 左耳枠線(太さ・線種・色) */
- border-left: 12px solid; /* 左耳枠線(太さ・線種・色) */
- border-bottom: 8px solid; /* 左耳枠線(太さ・線種・色) */
+ background: rgb(250, 239, 141);
+ border-top: 18px solid;
+ border-right: 12px solid;
+ border-left: 12px solid;
+ border-bottom: 8px solid;
  border-color: gold;
  border-radius: 300px 1px 300px 1px;
  transform: rotate( 125deg );
-}
-.neko-box-a::after {
+} */
+/* .neko-box-a::after {
  right: 3%;
- background: rgb(250, 239, 141); /* 右耳背景色 */
- border-top: 12px solid; /* 右耳枠線(太さ・線種・色) */
- border-right: 18px solid; /* 右耳枠線(太さ・線種・色) */
- border-left: 8px solid; /* 右耳枠線(太さ・線種・色) */
- border-bottom: 12px solid; /* 右耳枠線(太さ・線種・色) */
+ background: rgb(250, 239, 141);
+ border-top: 12px solid;
+ border-right: 18px solid;
+ border-left: 8px solid;
+ border-bottom: 12px solid;
  border-color: gold;
  border-radius: 300px 1px 300px 1px;
  transform: rotate( 155deg );
-}
+} */
 .EarCharm,
 .EarCharm::after{
     width: 80px;

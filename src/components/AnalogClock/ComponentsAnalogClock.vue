@@ -1,6 +1,6 @@
 <template>
     <div class="clock">
-        <Dials style="margin: 0;"/>
+        <Dials style="margin: 0; "/>
         <Hand class="hand seconds" type="seconds" :rotate="seconds"/>
         <Hand class="hand minutes" type="minutes" :rotate="minutes" />
         <Hand class="hand hours"   type="hours"   :rotate="hours"/>
