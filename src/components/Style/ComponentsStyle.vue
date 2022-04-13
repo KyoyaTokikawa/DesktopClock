@@ -6,7 +6,11 @@
             <div class="city_border_Navy_2"></div>
             <div class="EarCharm_sub-1"></div>
             <div class="EarCharm_sub-2"></div>
-            <div class="EarCharm"></div>
+            <div class="EarCharm left"></div>
+            <div class="EarCharm right"></div>
+            <div class="EarCharm_ring left"></div>
+            <div class="EarCharm_main"></div>
+            <div class="EarCharm_ring right"></div>
             <ComponetnsBaseVue />
         </div>
     </div>
@@ -68,83 +72,98 @@ export default defineComponent({
  border-radius: 300px 1px 300px 1px;
  transform: rotate( 155deg );
 }
-.EarCharm,
-.EarCharm::after{
-    width: 80px;
-    height: 80px;
-    left: 12%;
-    content: "";
-}
-
-.EarCharm {
-    position: absolute;
-    top: -80px;
-    left: 40px;
-    border-radius: 40px 200px 200px 40px;
-    transform: rotate(15deg);
-    background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
-}
-.EarCharm::after {
-    position: absolute;
-    content: "";
-    border-radius: 300px 40px 40px 300px;
-    left: 100px;
-    top: 0px;
-    background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
-    z-index: -10;
-}
-
-.EarCharm::before {
-    position: absolute;
-    content: "";
-    width: 40px;
+.EarCharm
+{
+    width: 90px;
     height: 60px;
-    left: 70px;
-    top: 10px;
-    border-radius: 40%;
+    top: -60px;
+    position: absolute;
+    border: solid 2px rgb(46, 46, 105);
     background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
+    content: "";
 }
 
+.EarCharm.left {
+    border-radius: 30% 60% 0 10% / 30% 60% 0 10%;
+    left: -15px;
+}
+.EarCharm.right {
+    border-radius: 60% 30% 10% 0 / 60% 30% 10% 0;
+    left: 90px
+}
+
+.EarCharm_main {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 35px;
+    left: 70px;
+    top: -35px;
+    border-radius: 40%;
+    border: solid 2px rgb(46, 46, 105);
+    background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
+    z-index: 1;
+}
+
+
+.EarCharm_ring {
+    border-radius: 100%;
+    position: absolute;
+    width: 90px;
+    height: 20px;
+    top: -12px;
+    content: "";
+    border: solid 2px rgb(46, 46, 105);
+    transform: rotate(180deg);
+    background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
+}
+.EarCharm_ring.left {
+    left: -15px;
+}
+.EarCharm_ring.right {
+    left: 90px;
+}
+.EarCharm_sub-1,
+.EarCharm_sub-2 {
+    height: 100px;
+    width: 40px;
+    top: -15px;
+    border: solid 2px rgb(46, 46, 105);
+}
 .EarCharm_sub-1 {
     position: absolute;
-    left: 65px;
-    top: -25px;
+    left: 20px;
     margin: 0;
     padding: 10px 0;
     z-index: 2;
-    height: 100px;
-    width: 40px;
-    border-radius: 0px 40px 0px 0px ;
+    border-radius: 50px 0px 0px 0px ;
     background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
-    transform: rotate(30deg);
+    transform: rotate(15deg);
     z-index: auto;
 }
 
 .EarCharm_sub-1:after {
     content: '';
     position: absolute;
-    left: 0;
-    top: 99%;
+    left: -2px;
+    top: 100%;
     height: 0px;
     width: 0px;
     border-radius: 0px 0px 10px 10px;
-    border-left: 20px solid rgb(46, 46, 105);
-    border-right: 20px  solid rgb(46, 46, 105);
+    border-left: 22px solid rgb(46, 46, 105);
+    border-right: 22px  solid rgb(46, 46, 105);
     border-bottom: 5px solid transparent;
 }
 
 .EarCharm_sub-2 {
     position: absolute;
-    left: 125px;
-    top: -10px;
+    left: 115px;
     margin: 0;
     padding: 10px 0;
     z-index: 2;
-    height: 100px;
-    width: 40px;
-    border-radius: 40px 0px 0px 0px ;
+    border-radius: 0px 50px 0px 0px ;
     background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
-    transform: rotate(350deg);
+    transform: rotate(-25deg);
     z-index: auto;
 }
 
@@ -152,12 +171,12 @@ export default defineComponent({
     content: '';
     position: absolute;
     left: 0;
-    top: 99%;
+    top: 100%;
     height: 0px;
     width: 0px;
     border-radius: 0px 0px 10px 10px;
-    border-left: 20px solid rgb(46, 46, 105);
-    border-right: 20px  solid rgb(46, 46, 105);
+    border-left: 22px solid rgb(46, 46, 105);
+    border-right: 22px  solid rgb(46, 46, 105);
     border-bottom: 5px solid transparent;
 }
 .city_border_white {
