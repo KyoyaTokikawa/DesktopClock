@@ -1,15 +1,15 @@
 <template>
-    <!-- <div class="neko-wrap-a"> -->
-        <!-- <div class="neko-box-a"> -->
-            <!-- <div class="city_border_white"></div> -->
-            <!-- <div class="city_border_Navy_1"></div> -->
-            <!-- <div class="city_border_Navy_2"></div> -->
-            <!-- <div class="EarCharm_sub-1"></div> -->
-            <!-- <div class="EarCharm_sub-2"></div> -->
-            <!-- <div class="EarCharm"></div> -->
+    <div class="base-wrap-a">
+        <div class="base-box-a">
+            <div class="city_border_white"></div>
+            <div class="city_border_Navy_1"></div>
+            <div class="city_border_Navy_2"></div>
+            <div class="EarCharm_sub-1"></div>
+            <div class="EarCharm_sub-2"></div>
+            <div class="EarCharm"></div>
             <ComponetnsBaseVue />
-        <!-- </div> -->
-    <!-- </div> -->
+        </div>
+    </div>
 </template>
 
 <script lang="ts">
@@ -25,7 +25,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.neko-box-a {
+.base-box-a {
  position: relative;
  top: 180px;
  width: 98%; /* ボックス幅 */
@@ -37,16 +37,17 @@ export default defineComponent({
  border-radius: 50px;
  z-index: auto;
 }
-/* .neko-box-a::before, 
-.neko-box-a::after {
+.base-box-a::before, 
+.base-box-a::after {
  height: 200px;
  width: 200px;
  position: absolute;
  content:'';
  top: -150px;
  z-index: -1;
-} */
-/* .neko-box-a::before {
+}
+
+.base-box-a::before {
  left: 3%;
  background: rgb(250, 239, 141);
  border-top: 18px solid;
@@ -56,8 +57,9 @@ export default defineComponent({
  border-color: gold;
  border-radius: 300px 1px 300px 1px;
  transform: rotate( 125deg );
-} */
-/* .neko-box-a::after {
+}
+
+.base-box-a::after {
  right: 3%;
  background: rgb(250, 239, 141);
  border-top: 12px solid;
@@ -67,7 +69,7 @@ export default defineComponent({
  border-color: gold;
  border-radius: 300px 1px 300px 1px;
  transform: rotate( 155deg );
-} */
+} 
 .EarCharm,
 .EarCharm::after{
     width: 80px;
@@ -183,7 +185,7 @@ export default defineComponent({
     height: 12%;
 }
 
-.neko-wrap-a{
+.base-wrap-a{
  background-color: transparent;
  position: relative;
  height: 50%;

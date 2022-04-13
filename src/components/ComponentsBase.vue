@@ -1,12 +1,12 @@
 <template>
-<div style="display: flex; margin: 20px 30px; -webkit-app-region: drag;">
+<div class="Style" style="display: flex; margin: 20px 30px;">
     <div class="AnalogClock">
         <div style=" margin: 0 auto; display: inline-block;">
             <ComponentsAnalogClockVue />
         </div>
     </div>
     <div style="display: flex; flex-direction: column;">
-        <div class="DateBox">
+        <div :class="[DateBox]">
             <div class="Date">
                 <ComponentsDateVue />
             </div>
@@ -32,40 +32,20 @@ export default defineComponent({
         ComponentsAnalogClockVue,
         ComponentsDateVue,
         ComponentsDigitalClockVue
+    },
+    props:{
+    },
+    setup(){
+        let AnalogClock = 'AnalogClock';
+        let DateBox = 'DateBox'+ " "+ 'GoldCity_DateBox';
+        return {
+            AnalogClock,
+            DateBox
+        }
     }
 })
 </script>
 
 <style scoped>
-.AnalogClock {
-    width: 50%;
-    text-align: center;
-}
 
-.DigitalClockBox {
-    display: flex;
-    align-items: center;
-    height: 50%;
-    width: 370px;
-    margin-top: 5px;
-    z-index: 0;
-}
-.DigitalClock {
-    color: rgb(29, 0, 82);
-    margin: 0 auto;
-}
-
-
-.DateBox {
-    display: flex;
-    align-items: center;
-    height: 50%;
-    width: 370px;
-    margin-bottom: 5px;
-    z-index: 0;
-}
-.Date {
-    color: rgb(29, 0, 82);
-    margin: 0 auto;
-}
 </style>

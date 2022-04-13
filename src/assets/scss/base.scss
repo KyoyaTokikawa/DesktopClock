@@ -1,0 +1,30 @@
+.AnalogClock{
+    width: 50%;
+    text-align: center;
+}
+.DigitalClockBox {
+    display: flex;
+    align-items: center;
+    height: 50%;
+    width: 370px;
+    border: 5px solid;
+    margin-top: 5px;
+    z-index: 0;
+}
+.DigitalClock {
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+.DateBox {
+    display: flex;
+    align-items: center;
+    height: 50%;
+    width: 370px;
+    border: 5px solid;
+    margin-bottom: 5px;
+    z-index: 0;
+}
+.Date {
+    margin: 0 auto;
+}

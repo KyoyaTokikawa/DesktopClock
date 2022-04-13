@@ -45,23 +45,17 @@ export default defineComponent ({
 .dials {
     background: rgba(119, 110, 148, 0);
     border-radius: 300px;
-
     position: relative;
-
     height: 300px;
     width: 300px;
 }
 
 .scale {
-    background-color: rgb(25, 21, 31);
-
+    background-color: rgb(245, 0, 0);
     position: absolute;
-
     width: 1px;
     height: 10px;
-
     transform-origin: left top;
-
 }
 
 .fifth {
@@ -72,12 +66,10 @@ export default defineComponent ({
 .fifth p {
     margin-top: 20px;
     margin-left: -15px;
-
-    color: rgb(250, 250, 250);
+    color: rgb(0, 17, 255);
     font-size: 28px;
     font-weight: bold;
     text-align: center;
-
     width: 35px;
 }
 </style>
