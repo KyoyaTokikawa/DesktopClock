@@ -35,16 +35,16 @@ export default defineComponent({
             return val;
         });
         const minutes = computed(() => {
-            let val = 6 * (mm.value + ss.value / 360);
+            let val = mm.value < 35 ? 6 * (mm.value + mm.value*2 / 360) : 6 * (mm.value + ((60 - (mm.value - 35) * 2)  / 360));
             if (mm.value % 5 === 0 || mm.value === 0
             )
             {
-                val = val + 1;
-            } 
+                val = val + 0.5;
+            }
             return val;
         });
         const hours = computed(() => {
-            return 30 * (hh.value + mm.value / 360)
+            return 30 * (hh.value + mm.value / 60)
         });
 
         return {

@@ -69,28 +69,31 @@ export default defineComponent({
  border-color: gold;
  border-radius: 300px 1px 300px 1px;
  transform: rotate( 155deg );
-} 
+}
+
+
 .EarCharm,
 .EarCharm::after{
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     left: 12%;
     content: "";
 }
 
 .EarCharm {
     position: absolute;
-    top: -80px;
+    top: -70px;
     left: 40px;
     border-radius: 40px 200px 200px 40px;
-    transform: rotate(15deg);
+    transform: rotate(0deg) skew(15deg, 20deg);
     background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
+
 }
 .EarCharm::after {
     position: absolute;
     content: "";
     border-radius: 300px 40px 40px 300px;
-    left: 100px;
+    left: 70px;
     top: 0px;
     background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
     z-index: -10;
@@ -99,26 +102,29 @@ export default defineComponent({
 .EarCharm::before {
     position: absolute;
     content: "";
-    width: 40px;
-    height: 60px;
-    left: 70px;
+    width: 30px;
+    height: 40px;
+    left: 45px;
     top: 10px;
     border-radius: 40%;
     background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
 }
-
+.EarCharm_sub-1,
+.EarCharm_sub-2 {
+    height: 80px;
+    width: 30px;
+}
 .EarCharm_sub-1 {
     position: absolute;
-    left: 65px;
-    top: -25px;
+    left: 50px;
+    top: -35px;
     margin: 0;
     padding: 10px 0;
     z-index: 2;
-    height: 100px;
-    width: 40px;
-    border-radius: 0px 40px 0px 0px ;
+
+    border-radius: 0px 0px 0px 30px ;
     background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
-    transform: rotate(30deg);
+    transform: rotate(60deg) skew(20deg, 20deg);
     z-index: auto;
 }
 
@@ -130,23 +136,21 @@ export default defineComponent({
     height: 0px;
     width: 0px;
     border-radius: 0px 0px 10px 10px;
-    border-left: 20px solid rgb(46, 46, 105);
+    border-left: 10px solid rgb(46, 46, 105);
     border-right: 20px  solid rgb(46, 46, 105);
-    border-bottom: 5px solid transparent;
+    border-bottom: 0px solid transparent;
 }
 
 .EarCharm_sub-2 {
     position: absolute;
-    left: 125px;
-    top: -10px;
+    left: 105px;
+    top: -20px;
     margin: 0;
     padding: 10px 0;
     z-index: 2;
-    height: 100px;
-    width: 40px;
-    border-radius: 40px 0px 0px 0px ;
+    border-radius: 10px 10px 0px 0px ;
     background: linear-gradient(rgb(93, 92, 173) 0%, rgb(46, 46, 105) 99%);
-    transform: rotate(350deg);
+    transform: rotate(-15deg) skew(-10deg, -30deg);
     z-index: auto;
 }
 
@@ -159,7 +163,7 @@ export default defineComponent({
     width: 0px;
     border-radius: 0px 0px 10px 10px;
     border-left: 20px solid rgb(46, 46, 105);
-    border-right: 20px  solid rgb(46, 46, 105);
+    border-right: 10px  solid rgb(46, 46, 105);
     border-bottom: 5px solid transparent;
 }
 .city_border_white {

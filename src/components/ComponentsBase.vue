@@ -6,12 +6,12 @@
         </div>
     </div>
     <div style="display: flex; flex-direction: column;">
-        <div :class="[DateBox]">
+        <div :class="DateBox">
             <div class="Date">
                 <ComponentsDateVue />
             </div>
         </div>
-        <div  class="DigitalClockBox">
+        <div  :class="DigitalClockBox">
             <div class="DigitalClock">
                 <ComponentsDigitalClockVue />
             </div>
@@ -33,14 +33,14 @@ export default defineComponent({
         ComponentsDateVue,
         ComponentsDigitalClockVue
     },
-    props:{
-    },
     setup(){
         let AnalogClock = 'AnalogClock';
         let DateBox = 'DateBox'+ " "+ 'GoldCity_DateBox';
+        let DigitalClockBox = 'DigitalClockBox' + ' ' + 'GoldCity_DigitalClockBox';
         return {
             AnalogClock,
-            DateBox
+            DateBox,
+            DigitalClockBox
         }
     }
 })
